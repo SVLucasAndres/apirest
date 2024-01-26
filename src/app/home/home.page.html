@@ -2,44 +2,33 @@
 <ion-content [fullscreen]="true">
 
   <ion-grid>
+    
     <ion-row>
       <ion-col>
-        <ion-input [(ngModel)]="entrada1"></ion-input>
-          <ion-button (click)="getPokemonDataID() " [ngClass]="{'bounce': bounceClass}">Enviar</ion-button>
-        <ion-card >
-          <ion-grid>
-            <ion-row>
-              <ion-col size="1">
-                <img [src]="pokemon1.sprites.front_default">
-              </ion-col>
-              <ion-col>
-                <ion-card-header>
-                  <h2>{{ pokemon1.name }}</h2>
-                  <p>ID: {{ pokemon1.id }}</p>
-                </ion-card-header>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card>
+        <ion-input [(ngModel)]="entrada1" placeholder="ID del Objeto"></ion-input>
+        <ion-button (click)="getItemDataID()" [ngClass]="{'bounce': bounceClass}">Enviar</ion-button>
+      <ion-card >
+        <img [src]="item1.sprites.default">
+        <ion-card-header>
+          <h2>{{ item1.name }}</h2>
+          <p>ID: {{ item1.id }}</p>
+          <p>Costo: {{ item1.cost }}</p>   
+          <p>Poder de lanzamiento: {{ item1.fling_power }}</p>
+        </ion-card-header>
+      </ion-card>
       </ion-col>
       <ion-col>
-        <ion-input [(ngModel)]="entrada2"></ion-input>
-        <ion-button (click)="getPokemonDataName() " [ngClass]="{'bounce': bounceClass}">Enviar</ion-button>
-      <ion-card >
-        <ion-grid>
-          <ion-row>
-            <ion-col size="1">
-              <img [src]="pokemon2.sprites.front_default">
-            </ion-col>
-            <ion-col>
-              <ion-card-header>
-                <h2>{{ pokemon2.name }}</h2>
-                <p>ID: {{ pokemon2.id }}</p>
-              </ion-card-header>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-card>
+        <ion-input [(ngModel)]="entrada2" placeholder="Nombre del Objeto"></ion-input>
+        <ion-button (click)="getItemDataName()" [ngClass]="{'bounce': bounceClass}">Enviar</ion-button>
+        <ion-card >
+          <img [src]="item2.sprites.default">
+          <ion-card-header>
+            <h2>{{ item2.name }}</h2>
+            <p>ID: {{ item2.id }}</p>
+            <p>Costo: {{ item2.cost }}</p>   
+            <p>Poder de lanzamiento: {{ item2.fling_power }}</p>
+          </ion-card-header>
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>

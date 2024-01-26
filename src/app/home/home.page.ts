@@ -11,24 +11,24 @@ import { Component } from '@angular/core';
 export class HomePage {
   entrada1: string = "";
   entrada2: string = "";
-  pokemon1: any;
-  pokemon2: any;
+  item1: any;
+  item2: any;
   bounceClass: boolean = false;
 
   constructor(private api: PokeapiService) {}
 
-  getPokemonDataID() {
-    this.api.getPokemonID(+this.entrada1).subscribe((response) => {
-      this.pokemon1 = response;
-      console.log(this.pokemon1);
+  getItemDataID() {
+    this.api.getItemID(+this.entrada1).subscribe((response) => {
+      this.item1 = response;
+      console.log(this.item1);
       this.applyBounceAnimation();
     });
   }
 
-  getPokemonDataName() {
-    this.api.getPokemonName(this.entrada2.toLowerCase()).subscribe((response) => {
-      this.pokemon2 = response;
-      console.log(this.pokemon2);
+  getItemDataName() {
+    this.api.getItemName(this.entrada2.toLowerCase()).subscribe((response) => {
+      this.item2 = response;
+      console.log(this.item2);
       this.applyBounceAnimation();
     });
   }

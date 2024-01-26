@@ -16,13 +16,13 @@ export class PokeapiService {
 
   // Método para obtener información de un Pokémon por su ID.
   // Retorna un Observable, ya que las solicitudes HTTP en Angular son asíncronas.
-  getPokemonID(id: number): Observable<any> {
+  getItemID(id: number): Observable<any> {
     // Utiliza el método get del HttpClient para realizar una solicitud GET a la URL de la PokeAPI con el ID del Pokémon.
-    return this.http.get(this.apiUrl+"pokemon/"+id);
+    return this.http.get(this.apiUrl+"item/"+id);
   }
 
-  getPokemonName(name: string): Observable<any> {
+  getItemName(name: string): Observable<any> {
     // Utiliza el método get del HttpClient para realizar una solicitud GET a la URL de la PokeAPI con el nombre del Pokémon.
-    return this.http.get(this.apiUrl+"pokemon/"+name);
+    return this.http.get(this.apiUrl+"item/"+name);
   }
 }
